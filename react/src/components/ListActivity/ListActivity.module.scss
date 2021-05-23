@@ -1,0 +1,78 @@
+@import '../../scss/variables';
+@import '../../scss/user-logo';
+
+
+.activityTitle {
+  // margin: 30px 0 20px 65px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-weight: 600;
+
+  .activityIcon {
+    position: absolute;
+    top: 5px;
+    left: -40px;
+    color: $secondaryTextColor;
+  }
+
+  .btnToggleActivity {
+    color: $secondaryTextColor;
+    text-decoration: underline;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: black;
+      box-shadow: none;
+    }
+  }
+}
+
+.list {  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  margin: 10px 0;
+}
+
+.logoAndActionContainer {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.userEmail {
+  font-weight: 600;
+  color: black;
+}
+
+.action,
+.howLongAgo {
+  margin: 0;
+}
+
+.userLogo {
+  @extend .userLogo;
+}
+
+.action,
+.objTitle,
+.pretext,
+.endPointTitle {
+  color: $thirdTextColor;
+}
+
+.howLongAgo {
+  color: $secondaryTextColor;
+}
+
+.objTitle,
+.endPointTitle {
+  text-decoration: underline;
+}

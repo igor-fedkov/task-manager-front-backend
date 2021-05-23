@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  react:
+    image: react
+    ports:
+      - "80:80"
+    depends_on: 
+      - node
+    networks: 
+      - app-network
+  node: 
+    image: node
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks: 
+      - app-network
+
+networks: 
+  app-network:
+    driver: bridge

@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+
+.inputContainer {
+  margin-bottom: 6px;
+}
+
+.inputField {
+  background-color: $userLogoBackground;
+  box-shadow: 0px 2px 10px 2px rgba(34, 60, 80, 0.2) inset;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $userLogoBackground;
+    box-shadow: 0px 2px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  }
+}

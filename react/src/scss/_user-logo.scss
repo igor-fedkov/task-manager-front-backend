@@ -1,0 +1,13 @@
+.userLogo {
+  position: absolute;
+  left: -45px;
+  top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;  
+  width: 38px;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: $userLogoBackground;
+}

@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+.buttonsContainer {
+  .btnClose {
+    margin-left: 5px;
+    padding: 2px 8px;
+    font-size: 1.5rem;
+    color: $secondaryTextColor;
+    background-color: transparent;
+    border: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $thirdTextColor;
+      background-color: transparent;
+      border-color: transparent;
+      // outline: none;
+    }
+  }
+
+  .icon {
+    display: block;
+  }
+}

@@ -1,0 +1,181 @@
+@import '../../scss/variables';
+@import '../../scss/bootstrap';
+
+.board {
+  width: 100vw;
+  min-height: calc(100vh - 54px);
+  background-color: $boardBackground;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+
+  .title {
+    margin: 0;
+    padding: 10px 15px;
+
+    font-size: 2rem;
+    color: white;
+  }
+
+  .list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    // @include media-breakpoint-up(sm) {
+    // }
+  }
+
+  .listItem {
+    margin: 10px 15px;
+    padding: 5px 10px;
+    width: calc(100% - 30px);
+    background-color: $cardBackground;
+    border-radius: 4px;
+
+    @include media-breakpoint-up(sm) {
+      margin: 10px;
+      width: calc((100% - 40px) / 2);      
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: calc((100% - 60px) / 3);      
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: calc((100% - 80px) / 4);      
+    }
+  }
+
+  .inputCardTitle {
+    resize: none;
+  }
+
+  .btnCreateList {
+    text-align: left;
+    color: #98d8fc;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+
+  .listItem.addNewList {
+    padding: 0;
+    // min-height: 31px;
+    background-color: $primary;
+  }
+
+  .btnShowMenu {
+    margin-left: auto;
+    color: white;
+    text-decoration: underline;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: black;
+    }
+  }
+
+  .boardTitleAndMenuBtnContainer {
+    position: relative;
+    display: flex;
+  }
+}
+
+//------------Board Menu--------------
+.menuBackprop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1100;
+
+  &:hover body {
+    overflow: hidden;
+  }
+}
+
+.boardMenu {
+  position: absolute;
+  padding: 0 0 20px 0;
+  top: 54px;
+  width: 100%; 
+  // max-height: 80vh;
+  overflow: scroll;
+  background-color: $menuBackground;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4);
+  // overflow-y: scroll;
+  z-index: 1100;
+
+  @include media-breakpoint-up(sm) {
+    right: 0;
+    width: 500px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    right: calc((100% - 1200px) / 2);
+  }
+
+  .menuTitle {
+    margin: 0;
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .btnClose {
+    position: absolute;
+    padding: 0;
+    color: $secondaryTextColor;
+    top: 20px;
+    right: 20px;
+    border: none;
+
+    transition: color $trans-time-and-bezier;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: black;
+    }
+  }
+
+  .btnRemoveBoard {
+    margin-bottom: 20px;
+    padding-left: 60px;
+    height: 75px;
+    width: 100%;
+    font-weight: 600;
+    text-align: left;
+
+    border-right: transparent;
+    border-left: transparent;
+    border-top: 1px solid $secondaryTextColor;
+    border-bottom: 1px solid $secondaryTextColor;
+
+    transition: background-color $trans-time-and-bezier;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $userLogoBackground;
+    }
+  }
+
+  .ActivityContainer {
+    margin: 0;
+    padding: 0 10px 0 60px;
+  }
+}

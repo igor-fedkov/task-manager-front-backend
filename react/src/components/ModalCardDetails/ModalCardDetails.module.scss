@@ -1,0 +1,151 @@
+@import '../../scss/variables';
+@import '../../scss/user-logo';
+@import '../../scss/bootstrap';
+
+.modal {
+  .dialog {
+    @include media-breakpoint-up(md) {
+      margin-left: calc((100% - 700px) / 2);
+    }
+  }
+  
+  .modalHeader,
+  .modalBody {
+    padding: 10px 10px 0 60px;
+    border: none;
+    background-color: $menuBackground;
+  }
+
+  .icon, 
+  .iconInside {
+    color: $secondaryTextColor;
+  }
+
+  .icon {
+    position: absolute;
+    top: 3px;
+    left: -35px;
+  }
+
+  .iconInside {
+    margin-right: 5px;
+  }
+
+  .inputField {
+    resize: none;
+  }
+
+  .btnSave {
+    margin-top: 5px;
+  }
+
+  //-------------------------------
+  //---------Modal Header---------- 
+  //------------------------------- 
+
+  .content {
+    @include media-breakpoint-up(md) {
+      width: 700px;
+    }
+  }
+
+  .titleContainer {
+    position: relative;
+    padding: 0;
+    line-height: 1;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .wherIsCard {
+    margin: 5px 0;
+    color: $secondaryTextColor;
+    font-size: 0.8rem;
+  }
+
+  .listTitle {
+    text-decoration: underline;
+  }
+
+  //-----------------------------
+  //---------Modal Body----------
+  //-----------------------------
+
+  .modalBody {
+    @include media-breakpoint-up(md) {
+      padding: 10px 200px 0 60px;
+    }
+  }
+
+  .actionsContainer {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 1.5rem;
+      right: 25px;
+
+      width: 150px;
+    }
+  }
+
+  .actionsTitle {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .btnRemoveCard {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    width: 100%;
+  }
+
+  //--------Description--------
+
+  .descriptionContainer {
+    margin-top: 5px;
+    padding: 0;
+    color: $thirdTextColor;    
+  }
+
+  .description {
+    margin: 10px 0 0 0;
+  }
+
+  .btnEditDescription {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: $userLogoBackground;
+    border-radius: 4px;
+  }
+
+  .btnDescriptionCaption {
+    text-decoration: underline;
+  }
+  
+  //--------Comment--------
+
+  .commentTitleContainer {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .commentTitle {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .commentContainer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .userLogo {
+    @extend .userLogo;
+    top: 0;
+  }
+
+}

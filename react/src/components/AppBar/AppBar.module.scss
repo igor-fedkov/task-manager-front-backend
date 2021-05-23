@@ -1,0 +1,68 @@
+@import '../../scss/variables';
+
+
+.appBar {
+  padding: 8px;
+
+  .appBarContainer {
+    // display: flex;
+    padding: 0;
+    max-width: 1200px;
+  }
+
+  .btnGoToMainPage {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: #4c93c2;
+  }
+
+  .btnDropdownMenu {
+    margin-left: auto;
+    color: $thirdTextColor;
+    font-weight: 500;
+    border-radius: 50%;
+  }
+
+  .btnGoToMainPageCaption {
+    margin-left: 10px;
+  }
+}
+
+//------Drop Menu-------
+
+.dropdownMenu {
+  position: absolute;
+  display: none;
+  padding: 5px;
+  right: 0;
+  
+  z-index: 1100;
+}
+
+.dropdownMenuContainer {
+  position: relative;
+
+  &:hover .dropdownMenu {
+    display: block;
+    min-width: 200px;
+    background-color: $menuBackground;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4);  
+  }
+  
+  .btnLogout {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.iconInside {
+  display: block;
+  margin-right: 5px;
+  color: $secondaryTextColor;
+}
+
+
+
+
