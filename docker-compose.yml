@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   react:
-    image: react
+    image: igorfedkov/react
     ports:
       - "80:80"
     depends_on: 
@@ -9,7 +9,8 @@ services:
     networks: 
       - app-network
   node: 
-    image: node
+    image: igorfedkov/nodejs
+    container_name: backend
     restart: unless-stopped
     ports:
       - "3000:3000"
